@@ -1,0 +1,28 @@
+{
+  "name": "fighintggame",
+  "dependencies": {
+    "google-protobuf": "^3.6.1",
+    "grpc-web": "^0.4.0"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GentDeLleida/fg_general_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GentDeLleida/fg_general_project/issues"
+  },
+  "homepage": "https://github.com/GentDeLleida/fg_general_project#readme",
+  "devDependencies": {
+    "webpack-cli": "^3.3.11",
+    "browserify": "^16.2.2",
+    "webpack": "^4.16.5"
+  }
+}

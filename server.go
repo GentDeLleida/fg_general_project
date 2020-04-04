@@ -4,7 +4,18 @@ import ( pb "game"
 		"net"
 		"google.golang.org/grpc"
 		"flag"
+		"context"
 	)
+
+func (TypeShit) StartGame(context.Context, *pb.StartRequest) (*pb.StartResponse, error){
+	return nil, nil
+}
+
+func (TypeShit) Game(pb.FightingGame_GameServer) error{
+	return nil
+}
+
+type TypeShit struct{}	
 
 func main (){
 	port    := flag.Int("port", 50051, "The server port")
@@ -14,6 +25,8 @@ func main (){
 	}
 	var opts []grpc.ServerOption
 	grpcServer := grpc.NewServer(opts...)
-	pb.RegisterFightingGameServer(grpcServer, newServer())
+	srv := TypeShit{}
+	pb.RegisterFightingGameServer(grpcServer, srv)
+	fmt.Println("Startig Server")
 	grpcServer.Serve(lis)
 }
