@@ -1,0 +1,37 @@
+syntax = "proto3";
+package game;
+
+service FightingGame{
+    // start game 
+    rpc StartGame ( StartRequest ) returns ( StartResponse ) {}
+    // game actions
+    rpc Game ( stream Actions ) returns ( stream Status ) {}
+
+}
+
+message StartRequest {
+    string username = 1;
+    int32 character = 2;
+}
+
+message StartResponse {
+    Status init_status  = 1;
+}
+
+message Actions {
+    string action = 1;
+}
+
+message Player {
+    int32 sprite = 1;
+    int32 posX = 2;
+    int32 posY = 3;
+    int32 health = 4;
+    int32 character = 5;
+    string username = 6;
+}
+
+message Status {
+    Player player1 = 1;
+    Player player2 = 2;
+}
