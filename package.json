@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/GentDeLleida/fg_general_project#readme",
   "devDependencies": {
-    "webpack-cli": "^3.3.11",
+    "webpack-cli": "^5.0.1",
     "browserify": "^16.2.2",
-    "webpack": "^4.16.5"
+    "webpack": "^5.75.0"
   }
 }
